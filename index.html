@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Resource Page</title>
+</head>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Boldonse&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Gidole&family=Honk&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Pacifico&family=Rubik+Mono+One&display=swap');
+
+#sss{
+	transition: all 4s;
+}
+
+	#to{
+		position: absolute;
+		top: 0vh;
+		left: 0vw;
+		width: 93vw;
+		height:8vh;
+		box-shadow: 0px 3px darkblue;
+		font-family: "Merryweather", sans-serif;
+		font-style: normal;
+		font-stretch: 300;
+		font-size: 30px;
+		color: darkblue;
+		padding-left: 7vw;
+		padding-top: 2vh;
+		text-shadow: 1px 1px gray;
+		background: white;
+	}
+	#la{
+		position: absolute;
+		left: 93%;
+		top: 4%;
+		width: 5%;
+		height: 0.8%;
+		background: darkblue;
+		border-radius: 20px;
+		z-index: 3;
+		transition: all 1s;
+	}
+	#lb{
+		position: absolute;
+		left: 93%;
+		top: 6%;
+		width: 5%;
+		height: 0.8vh;
+		background: darkblue;
+		border-radius: 20px;
+		z-index: 3;
+		transition: all 1s;
+	}
+	#bu1{
+		position: absolute;
+		height: 4vh;
+		width: 10vw;
+		top: 2.5vh;
+		left: 46vw;
+		background: darkblue;
+		color: white;
+		border-radius: 10px;
+		text-align: center;
+		font-size: 18px;
+		font-family: merryweather;
+		padding-top: 1vh;
+		font-family: "Merryweather", sans-serif;
+	}
+	#bu2{
+		position: absolute;
+		height: 4vh;
+		width: 10vw;
+		top: 2.5vh;
+		left: 60vw;
+		background: darkblue;
+		color: white;
+		border-radius: 10px;
+		text-align: center;
+		font-size: 18px;
+		font-family: merryweather;
+		padding-top: 1vh;
+		font-family: "Merryweather", sans-serif;
+	}
+	#bu3{
+		position: absolute;
+		height: 4vh;
+		width: 10vw;
+		top: 2.5vh;
+		left: 74vw;
+		background: darkblue;
+		color: white;
+		border-radius: 10px;
+		text-align: center;
+		font-size: 18px;
+		font-family: merryweather;
+		padding-top: 1vh;
+		font-family: "Merryweather", sans-serif;
+	}
+	#escu{
+		position: absolute;
+		z-index: 2;
+		scale: 0.18;
+		top: -18vh;
+		left: -8vw;
+
+	}
+
+	#back{
+		position: absolute;
+		top: 15vh;
+		left: 0vw;
+		height: 12vh;
+		width: 100vw;
+		background: gray;
+		box-shadow: 0px 2px darkblue, 0px -2px darkblue;
+		z-index: -3;
+	}
+	#to1{
+		position: absolute;
+		top: 28vh;
+		left: 33vw;
+		font-family: "Merryweather", sans-serif;
+		font-style: normal;
+		font-stretch: 300;
+		font-size: 15px;
+		color: darkblue;
+		text-shadow: 1px 1px gray;
+	}
+	#line{
+		z-index: 3;
+		height: 0.6vh;
+		width: 60vw;
+		position: absolute;
+		top: 31.5vh;
+		left: 22vw;
+		background: darkblue;
+	}
+
+	#ddd{
+		position: absolute;
+		top:16.5vh;
+		left: 38vw;
+		font-family: "Bebas Neue", sans-serif;
+		font-style: normal;
+		font-stretch: 800;
+		font-size: 65px;
+		color: darkblue;
+		text-shadow: 1px 1px gray;
+		z-index: 4;
+		line-height: 1;
+	}
+	
+	
+#tt1{
+		position: absolute;
+		top: 116vh;
+		left: 40vw;
+		color: gray;
+		width: 38vw;
+	}
+	#svg1{
+		position: absolute;
+		top: 15.5vh;
+		left: 25vw;
+		scale: 0.8;
+	}
+	#svg2{
+		position: absolute;
+		top: 15.5vh;
+		left: 75vw;
+		scale: 0.8;
+	}
+
+	#cua{
+		position: absolute;
+		top: 35vh;
+		left: 40vh;
+		height: 55vh;
+		width: 64vw;
+		background: white;
+		border: solid;
+		color: darkblue;
+	}
+	#a1{
+		position: absolute;
+		top: 0vh;
+		left: 0vh;
+		height: 6vh;
+		width: 16vw;
+		color: darkblue;
+		border: solid 2px;
+		text-align: center;
+		padding-top: 2vh;
+		font-size: 3.5vh;
+		font-family: "Merryweather", sans-serif;
+		transition: all 1s;
+		cursor: pointer;
+	}
+	#a2{
+		position: absolute;
+		top: 0vh;
+		left: 33vh;
+		height: 6vh;
+		width: 16vw;
+		color: darkblue;
+		border: solid 2px;
+		text-align: center;
+		padding-top: 2vh;
+		font-size: 3.5vh;
+		font-family: "Merryweather", sans-serif;
+		transition: all 1s;
+		cursor: pointer;
+	}
+	#a3{
+		position: absolute;
+		top: 0vh;
+		left: 66vh;
+		height: 6vh;
+		width: 16vw;
+		color: darkblue;
+		border: solid 2px;
+		text-align: center;
+		padding-top: 2vh;
+		font-size: 3.5vh;
+		font-family: "Merryweather", sans-serif;
+		transition: all 1s;
+		cursor: pointer;
+	}
+	#a4{
+		position: absolute;
+		top: 0vh;
+		left:99vh;
+		height: 6vh;
+		width: 15.3vw;
+		color: darkblue;
+		border: solid 2px;
+		text-align: center;
+		padding-top: 2vh;
+		font-size: 3.5vh;
+		font-family: "Merryweather", sans-serif;
+		transition: all 1s;
+		cursor: pointer;
+	}
+	#a1:hover{
+		background: darkblue;
+		color: white;
+	}
+	#a2:hover{
+		background: darkblue;
+		color: white;
+	}
+	#a3:hover{
+		background: darkblue;
+		color: white;
+	}
+	#a4:hover{
+		background: darkblue;
+		color: white;
+	}
+	#cont1{
+		position: absolute;
+		top: 22vh;
+		left: 18vw;
+		font-family: "Merryweather", sans-serif;
+		font-size: 5vh;
+		text-align: center;
+	}
+	#obj1{
+		position: absolute;
+		top: 12vh;
+		left: 35vw;
+		width: 25vw;
+		height: 7vh;
+		font-size: 3vh;
+		background: white;
+		color: darkblue;
+		border: solid;
+		text-align: center;
+		font-family: "Merryweather", sans-serif;
+		border-radius: 5px;
+		cursor: pointer;
+		padding-top: 3vh;
+	}
+	#obj2{
+		position: absolute;
+		top: 24vh;
+		left: 45vw;
+		width: 15vw;
+		height: 4vh;
+		font-size: 3vh;
+		background: white;
+		color: darkblue;
+		border: solid;
+		text-align: center;
+		font-family: "Merryweather", sans-serif;
+		border-radius: 5px;
+	}
+	#obj3{
+		position: absolute;
+		top: 30vh;
+		left: 45vw;
+		width: 15vw;
+		height: 4vh;
+		font-size: 3vh;
+		background: white;
+		color: darkblue;
+		border: solid;
+		text-align: center;
+		font-family: "Merryweather", sans-serif;
+		border-radius: 5px;
+	}
+	#obj4{
+		position: absolute;
+		top: 36vh;
+		left: 45vw;
+		width: 15vw;
+		height: 4vh;
+		font-size: 3vh;
+		background: white;
+		color: darkblue;
+		border: solid;
+		text-align: center;
+		font-family: "Merryweather", sans-serif;
+		border-radius: 5px;
+	}
+
+	.wwwa{
+		position: absolute;
+		top: 16vh;
+		left: 45vw;
+		width: 15vw;
+		height: 4vh;
+		font-size: 3vh;
+		background: white;
+		color: darkblue;
+		border: solid;
+		text-align: center;
+		font-family: "Merryweather", sans-serif;
+		border-radius: 5px;
+	}
+	.wwwb{
+		position: absolute;
+		top: 22vh;
+		left: 45vw;
+		width: 15vw;
+		height: 4vh;
+		font-size: 3vh;
+		background: white;
+		color: darkblue;
+		border: solid;
+		text-align: center;
+		font-family: "Merryweather", sans-serif;
+		border-radius: 5px;
+	}
+	.wwwc{
+		position: absolute;
+		top: 28vh;
+		left: 45vw;
+		width: 15vw;
+		height: 4vh;
+		font-size: 3vh;
+		background: white;
+		color: darkblue;
+		border: solid;
+		text-align: center;
+		font-family: "Merryweather", sans-serif;
+		border-radius: 5px;
+	}
+	.wwwd{
+		position: absolute;
+		top: 34vh;
+		left: 45vw;
+		width: 15vw;
+		height: 4vh;
+		font-size: 3vh;
+		background: white;
+		color: darkblue;
+		border: solid;
+		text-align: center;
+		font-family: "Merryweather", sans-serif;
+		border-radius: 5px;
+	}
+	#bacc{
+		transition: all 1s;	
+		position: absolute;
+		top: 20vh;
+		left: 0vw;
+		height:80vh;
+		width: 100vw;
+	}
+	#backg{
+		top: 0vh;
+		left: 0vw;
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		background: linear-gradient(to right,#b1b1b1 -1%, white 20% , white,#b1b1b1 110%);
+		z-index: -28;
+	}
+	
+
+	  #resolution-warning {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0);
+      color: white;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      text-align: center;
+      padding: 2rem;
+    }
+    #img1{
+    	scale: 0.2;
+    	position: absolute;
+    	top: -14.5vh;
+    	left: -6vw;
+    	color: darkblue;
+    	border: solid;
+    }
+    #img1a{
+    	position: absolute;
+    	top: -22vh;
+    	left: -30vw;
+    	display: none;
+    	scale: 0.3;
+    }
+    #v1a{
+    	position: absolute;
+    	top: 45vh;
+    	left:13vw;
+    	width: 10vw;
+    	height: 5vh;
+    	background: darkblue;
+    	color: white;
+    	border: solid;
+    	border-radius: 15px;
+    	text-align: center;
+    	font-family: "Merryweather", sans-serif;
+    	padding-top: 2vh;
+    	display: none;
+    }
+
+   #obje1{
+   	position: absolute;
+		top: 12vh;
+		left: 35vw;
+		width: 25vw;
+		height: 7vh;
+		font-size: 3vh;
+		background: white;
+		color: darkblue;
+		border: solid;
+		text-align: center;
+		font-family: "Merryweather", sans-serif;
+		border-radius: 5px;
+		cursor: pointer;
+		padding-top: 3vh;
+   }
+   #obje2{
+   	position: absolute;
+		top: 24vh;
+		left: 45vw;
+		width: 15vw;
+		height: 4vh;
+		font-size: 3vh;
+		background: white;
+		color: darkblue;
+		border: solid;
+		text-align: center;
+		font-family: "Merryweather", sans-serif;
+		border-radius: 5px;
+   }
+   #obje3{
+   position: absolute;
+		top: 30vh;
+		left: 45vw;
+		width: 15vw;
+		height: 4vh;
+		font-size: 3vh;
+		background: white;
+		color: darkblue;
+		border: solid;
+		text-align: center;
+		font-family: "Merryweather", sans-serif;
+		border-radius: 5px;
+   }
+   #obje4{
+   	position: absolute;
+		top: 36vh;
+		left: 45vw;
+		width: 15vw;
+		height: 4vh;
+		font-size: 3vh;
+		background: white;
+		color: darkblue;
+		border: solid;
+		text-align: center;
+		font-family: "Merryweather", sans-serif;
+		border-radius: 5px;
+   }
+   #img2{
+   	scale: 0.6;
+    	position: absolute;
+    	top: -2vh;
+    	left: 0vw;
+    	border: solid;
+    	color: darkblue;
+   }
+   #img2a{
+    	position: absolute;
+    	top: -18vh;
+    	left: -27vw;
+    	display: none;
+    	scale: 0.3;
+    }
+    #v2a{
+    	position: absolute;
+    	top: 45vh;
+    	left:13vw;
+    	width: 10vw;
+    	height: 5vh;
+    	background: darkblue;
+    	color: white;
+    	border: solid;
+    	border-radius: 15px;
+    	text-align: center;
+    	font-family: "Merryweather", sans-serif;
+    	padding-top: 2vh;
+    	display: none;
+    }
+</style>
+<body id="sss">
+
+	<div id="to">Centro Educativo Neosistemas</div>
+
+	<img src="escudo.png" id="escu">
+
+
+
+	<div id="back"></div>
+	<div id="line"></div>
+
+	<div id="ddd">NeoPublicaciones</div>
+	<svg id="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 75" width="64.2422px" height="72.5174px">
+  <g transform="matrix(3.3811700344085693, 0, 0, 3.4532101154327393, -3.3811700344085693, -6.9064202308654785)" style="">
+    <path d="M18 20.5H12.2678C11.9806 21.051 11.6168 21.5557 11.1904 22H18C19.104 22 20 21.104 20 20V9.828C20 9.298 19.789 8.789 19.414 8.414L13.585 2.586C13.57 2.57105 13.5531 2.55808 13.5363 2.5452C13.5238 2.53567 13.5115 2.5262 13.5 2.516C13.429 2.452 13.359 2.389 13.281 2.336C13.2557 2.31894 13.2281 2.30548 13.2005 2.29207C13.1845 2.28426 13.1685 2.27647 13.153 2.268C13.1363 2.25859 13.1197 2.24897 13.103 2.23933C13.0488 2.20797 12.9944 2.17648 12.937 2.152C12.74 2.07 12.528 2.029 12.313 2.014C12.2933 2.01274 12.2738 2.01008 12.2542 2.00741C12.2271 2.00371 12.1999 2 12.172 2H6C4.896 2 4 2.896 4 4V11.4982C4.47417 11.3004 4.97679 11.1572 5.5 11.0764V4C5.5 3.725 5.724 3.5 6 3.5H12V8C12 9.104 12.896 10 14 10H18.5V20C18.5 20.275 18.276 20.5 18 20.5ZM17.378 8.5H14C13.724 8.5 13.5 8.275 13.5 8V4.621L17.378 8.5ZM13 17.5C13 18.0163 12.9398 18.5185 12.8261 19H15.25C16.2165 19 17 18.2165 17 17.25V13.25C17 12.2835 16.2165 11.5 15.25 11.5H9.0044C9.97947 11.9075 10.8341 12.5457 11.5 13.3464V13H15.25C15.3881 13 15.5 13.1119 15.5 13.25V14.5H12.2678C12.5124 14.9693 12.7014 15.4722 12.8261 16H15.5V17.25C15.5 17.3881 15.3881 17.5 15.25 17.5H13ZM12 17.5C12 20.5376 9.53757 23 6.5 23C3.46243 23 1 20.5376 1 17.5C1 14.4624 3.46243 12 6.5 12C9.53757 12 12 14.4624 12 17.5ZM9.85355 15.1464C9.65829 14.9512 9.34171 14.9512 9.14645 15.1464L5.5 18.7929L3.85355 17.1464C3.65829 16.9512 3.34171 16.9512 3.14645 17.1464C2.95118 17.3417 2.95118 17.6583 3.14645 17.8536L5.14645 19.8536C5.34171 20.0488 5.65829 20.0488 5.85355 19.8536L9.85355 15.8536C10.0488 15.6583 10.0488 15.3417 9.85355 15.1464Z" fill="darkblue"/>
+  </g>
+	</svg>
+<svg id="svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 75" width="64.2422px" height="72.5174px">
+  <g transform="matrix(4.0149102210998535, 0, 0, 3.6258699893951416, -16.059600830078125, -7.251699924468994)" style="">
+    <path d="M7.75 11.5C7.33579 11.5 7 11.8358 7 12.25C7 12.6642 7.33579 13 7.75 13C8.16421 13 8.5 12.6642 8.5 12.25C8.5 11.8358 8.16421 11.5 7.75 11.5ZM7 15.25C7 14.8358 7.33579 14.5 7.75 14.5C8.16421 14.5 8.5 14.8358 8.5 15.25C8.5 15.6642 8.16421 16 7.75 16C7.33579 16 7 15.6642 7 15.25ZM10 12.25C10 11.8358 10.3358 11.5 10.75 11.5H13.8038C14.218 11.5 14.5538 11.8358 14.5538 12.25C14.5538 12.6642 14.218 13 13.8038 13H10.75C10.3358 13 10 12.6642 10 12.25ZM10.75 14.5C10.3358 14.5 10 14.8358 10 15.25C10 15.6642 10.3358 16 10.75 16H13.8038C14.218 16 14.5538 15.6642 14.5538 15.25C14.5538 14.8358 14.218 14.5 13.8038 14.5H10.75ZM6.25 2C5.00736 2 4 3.00736 4 4.25V17.25C4 18.4926 5.00736 19.5 6.25 19.5H15.25C16.4926 19.5 17.5 18.4926 17.5 17.25V8.86885C17.5 8.27211 17.2629 7.69981 16.841 7.27786L12.2221 2.65901C11.8002 2.23705 11.2279 2 10.6312 2H6.25ZM5.5 4.25C5.5 3.83579 5.83579 3.5 6.25 3.5H10.5039V6.74753C10.5039 7.99017 11.5113 8.99753 12.7539 8.99753H16V17.25C16 17.6642 15.6642 18 15.25 18H6.25C5.83579 18 5.5 17.6642 5.5 17.25V4.25ZM12.0039 6.74753V4.56209L14.9393 7.49753H12.7539C12.3397 7.49753 12.0039 7.16174 12.0039 6.74753ZM8.75088 22C7.77121 22 6.93778 21.3739 6.62891 20.5H15.2509C17.0458 20.5 18.5009 19.0449 18.5009 17.25V8.93689L19.3419 9.77788C19.7638 10.1998 20.0009 10.7721 20.0009 11.3689V17.25C20.0009 19.8734 17.8742 22 15.2509 22H8.75088Z" fill="darkblue"/>
+  </g>
+</svg>
+
+	<div id="to1">Páginas - Archivos - Documentos - Proyectos - Ideas - Conceptos - Dinámicas</div>
+
+
+
+<svg id="bacc" viewBox="0 0 1300 450">
+  <defs>
+    <filter id="drop-shadow-filter-0" bx:preset="drop-shadow 1 -1 -7 6 0.68 rgba(0,0,0,0.3)" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="-1" dy="-7"/>
+      <feComponentTransfer result="offsetblur">
+        <feFuncA id="spread-ctrl" type="linear" slope="1.36"/>
+      </feComponentTransfer>
+      <feFlood flood-color="rgba(0,0,0,0.3)"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-1" bx:preset="drop-shadow 1 -1 -7 6 0.68 rgba(0,0,0,0.3)" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="-1" dy="-7"/>
+      <feComponentTransfer result="offsetblur">
+        <feFuncA id="feFuncA-1" type="linear" slope="1.36"/>
+      </feComponentTransfer>
+      <feFlood flood-color="rgba(0,0,0,0.3)"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-2" bx:preset="drop-shadow 1 -1 -7 6 0.68 rgba(0,0,0,0.3)" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="-1" dy="-7"/>
+      <feComponentTransfer result="offsetblur">
+        <feFuncA id="feFuncA-2" type="linear" slope="1.36"/>
+      </feComponentTransfer>
+      <feFlood flood-color="rgba(0,0,0,0.3)"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path id="aaa" style="stroke: rgb(0, 0, 0); filter: url(&quot;#drop-shadow-filter-0&quot;); stroke-width: 0px; fill: rgb(245, 245, 245); transition: all 2s;" d="M -4.649 163.327 C 536.951 -109.019 899.958 612.754 1304.743 157.634 L 1305.882 507.185 L -6.927 507.185 L -4.649 163.327 Z"/>
+  <path id="aaaa" style="stroke: rgb(0, 0, 0); filter: url(&quot;#filter-1&quot;); stroke-width: 0px; fill: rgb(226, 226, 226); transition: all 2s;" d="M -5.218 217.76 C 536.382 -10.422 899.389 594.307 1304.17 212.99 L 1305.31 505.857 L -7.496 505.857 L -5.218 217.76 Z"/>
+  <path id="aaaaa" style="stroke: rgb(0, 0, 0); filter: url(&quot;#filter-2&quot;); stroke-width: 0px; fill: rgb(194, 194, 194); transition: all 2s;" d="M -4.08 271.774 C 537.52 85.471 900.527 579.211 1305.32 267.88 L 1306.45 506.995 L -6.358 506.995 L -4.08 271.774 Z"/>
+</svg>
+	
+
+
+	<div id="cua">
+		<div id="a1" onclick="aa1()">Recursos</div>
+		<div id="a2" onclick="aa2()">Juegos</div>
+		<div id="a3" onclick="aa3()">Laboratorios</div>
+		<div id="a4" onclick="aa4()">Otros</div>
+
+		<div id="cont1">Haz click en cualquier item<br> para ver sus contenidos.</div>
+
+		<div id="obj1" style="display: none;" onclick="pagina1()"><img src="p1.png" id="img1">Pagina de colores (1)</div>
+		<div id="obj2" style="display: none;">(próximamente)</div>
+		<div id="obj3" style="display: none;">(próximamente)</div>
+		<div id="obj4" style="display: none;">(próximamente)</div>
+
+		<img src="p1a.png" id="img1a"><a href="https://briannvn.github.io/NeoColors/"><div id="v1a">Visitar</div></a>
+
+
+		<div id="obje1" style="display: none;" onclick="pagina2()"><img src="p2.png" id="img2">NeoSumas</div>
+		<div id="obje2" style="display: none;" class="wwwb">(próximamente)</div>
+		<div id="obje3" style="display: none;" class="wwwc">(próximamente)</div>
+		<div id="obje4" style="display: none;" class="wwwd">(próximamente)</div>
+
+		<img src="p2a.png" id="img2a"><a href="https://rravehoyos.github.io/NeoSumas/"><div id="v2a">Visitar</div></a>
+
+	</div>	
+
+
+
+
+	<div id="backg"></div>
+	<div id="resolution-warning">
+    ⚠️ Esta es una página horizontal
+  </div>
+
+
+
+	<script>
+		setInterval(backgr,1000)
+		function backgr() {
+			sss.style.background="white"
+			aaa.style.fill="#f5f5f5"
+			aaaa.style.fill="#e2e2e2"
+			aaaaa.style.fill="#c2c2c2"
+			setInterval(backgr1,3000)
+		}
+		function backgr1() {
+			sss.style.background="#cac7c7"
+			aaa.style.fill="#ddd"
+			aaaa.style.fill="#c9c9c9"
+			aaaaa.style.fill="#adadad"
+			setInterval(backgr2,3000)
+		}
+		function backgr2() {
+			sss.style.background="#b6b5b5"
+			aaa.style.fill="#ccc"
+			aaaa.style.fill="#b3b3b3"
+			aaaaa.style.fill="#a6a6a6"
+			setInterval(backgr3,3000)
+		}
+		function backgr3() {
+			sss.style.background="#acabab"
+			aaa.style.fill="#ccc"
+			aaaa.style.fill="#b3b3b3"
+			aaaaa.style.fill="#a6a6a6"
+			setInterval(backgr4,3000)
+		}
+		function backgr4() {
+			sss.style.background="#b3b3b3"
+			aaa.style.fill="#ddd"
+			aaaa.style.fill="#c9c9c9"
+			aaaaa.style.fill="#adadad"
+			setInterval(backgr5,3000)
+		}
+		function backgr5() {
+			sss.style.background="#c7c7c7"
+			aaa.style.fill="#f5f5f5"
+			aaaa.style.fill="#e2e2e2"
+			aaaaa.style.fill="#c2c2c2"
+			setInterval(backgr,3000)
+		}
+
+
+		function pagina1() {
+			img1a.style.display="initial"
+			v1a.style.display="initial"
+		}
+		function pagina2() {
+			img2a.style.display="initial"
+			v2a.style.display="initial"
+		}
+
+
+		x=0
+		function aa1() {
+			x=1
+			obj1.style.display="initial"
+			obj2.style.display="initial"
+			obj3.style.display="initial"
+			obj4.style.display="initial"
+			obje1.style.display="none"
+			obje2.style.display="none"
+			obje3.style.display="none"
+			obje4.style.display="none"
+			cont1.style.display="none"
+			img1a.style.display="none"
+			v1a.style.display="none"
+			img2a.style.display="none"
+			v2a.style.display="none"
+		}
+		function aa2() {
+			x=2
+			obj1.style.display="none"
+			obj2.style.display="none"
+			obj3.style.display="none"
+			obj4.style.display="none"
+			obje1.style.display="initial"
+			obje2.style.display="initial"
+			obje3.style.display="initial"
+			obje4.style.display="initial"
+			cont1.style.display="none"
+			img1a.style.display="none"
+			v1a.style.display="none"
+			img2a.style.display="none"
+			v2a.style.display="none"
+		}
+		function aa3() {
+			x=3
+			obj1.style.display="none"
+			obj2.style.display="none"
+			obj3.style.display="none"
+			obj4.style.display="none"
+			obje1.style.display="none"
+			obje2.style.display="none"
+			obje3.style.display="none"
+			obje4.style.display="none"
+			cont1.style.display="initial"
+			img1a.style.display="none"
+			v1a.style.display="none"
+			img2a.style.display="none"
+			v2a.style.display="none"
+			cont1.innerHTML="Observa la fisica y la<br> quimica desde tu pantalla<br> (Próximamente)"
+		}
+		function aa4() {
+			x=4
+			obj1.style.display="none"
+			obj2.style.display="none"
+			obj3.style.display="none"
+			obj4.style.display="none"
+			obje1.style.display="none"
+			obje2.style.display="none"
+			obje3.style.display="none"
+			obje4.style.display="none"
+			cont1.style.display="initial"
+			img1a.style.display="none"
+			v1a.style.display="none"
+			img2a.style.display="none"
+			v2a.style.display="none"
+			cont1.innerHTML="Páginas y cosas varias<br> (Próximamente)"
+		}
+
+		
+ function checkResolution() {
+      const minWidth = 1000;
+      const minHeight = 600;
+      const warning = document.getElementById("resolution-warning");
+
+      if (window.innerHeight > window.innerWidth) {
+        warning.style.display = "flex";
+      } else {
+        warning.style.display = "none";
+      }
+    }
+
+    window.addEventListener("load", checkResolution);
+    window.addEventListener("resize", checkResolution);
+
+	</script>
+
+</body>
+</html>
